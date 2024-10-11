@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'gatsby';
-import {container} from "../styles/layout.module.css";
+import {layout} from "../styles/layout.module.scss";
+
+//import * as styles from './layout.module.scss';
 
 interface LayoutProps {
     title: string;
@@ -9,7 +11,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({title, children}) => {
     return (
-        <div className={container}>
+        <div className={layout}>
             <header>
                 <h1>{title}</h1>
                 <nav>

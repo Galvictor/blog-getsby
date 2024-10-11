@@ -1,0 +1,64 @@
+// Estilos do Layout
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$background-color: #f4f4f4;
+$text-color: #333;
+
+.layout {
+    font-family: Arial, sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    header {
+        background-color: $primary-color;
+        padding: 20px;
+        color: white;
+        text-align: center;
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            margin-top: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+
+                li {
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-weight: bold;
+                        transition: color 0.3s;
+
+                        &:hover {
+                            color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer {
+        background-color: $primary-color;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
