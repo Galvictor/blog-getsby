@@ -1,15 +1,14 @@
 import * as React from "react"
-import type {HeadFC, PageProps} from "gatsby"
-import Layout from "../../components/Layout";
+import type {HeadFC} from "gatsby"
+import Layout from "../../components/layout";
 
-const IndexPage: React.FC<PageProps> = () => {
+const PostsPage: React.FC = () => {
     return (
         <Layout title="Posts">
-            <p>Página Posts!</p>
+            <p>Bem-vindo à página de posts!</p>
         </Layout>
-    )
-}
+    );
+};
 
-export default IndexPage
-
+export default PostsPage;
 export const Head: HeadFC = () => <title>Home Page</title>

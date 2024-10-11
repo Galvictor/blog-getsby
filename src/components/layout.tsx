@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'gatsby';
+import {container} from "../styles/layout.module.css";
 
 interface LayoutProps {
     title: string;
@@ -8,9 +9,9 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({title, children}) => {
     return (
-        <div>
+        <div className={container}>
             <header>
-                <h1 className="text-custom-color1">{title}</h1>
+                <h1>{title}</h1>
                 <nav>
                     <ul>
                         <li>
