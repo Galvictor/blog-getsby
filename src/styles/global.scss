@@ -1,0 +1,17 @@
+// Importar as variáveis do Bootstrap
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// Definir novas cores personalizadas e sobrescrever cores existentes
+$custom-colors: (
+        "primary": #3498db, // Sobrescrever cor primária do Bootstrap
+        "secondary": #2ecc71, // Sobrescrever cor secundária do Bootstrap
+        "custom-color1": #e74c3c, // Nova cor personalizada 1
+        "custom-color2": #8e44ad // Nova cor personalizada 2
+);
+
+// Fazer merge do mapa de cores original com o mapa customizado
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "node_modules/bootstrap/scss/bootstrap";
