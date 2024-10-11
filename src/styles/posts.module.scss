@@ -1,0 +1,51 @@
+// Estilos para a lista de posts
+$post-bg: #ffffff;
+$post-border: #3498db;
+$post-shadow: rgba(0, 0, 0, 0.1);
+$hover-bg: #f4f4f4;
+$title-color: #2c3e50;
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.postLink {
+  text-decoration: none;
+
+  .post {
+    background-color: $post-bg;
+    border: 1px solid $post-border;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px $post-shadow;
+    padding: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: $hover-bg;
+      transform: scale(1.02); // Efeito de zoom ao passar o mouse
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px 8px 0 0;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      color: $title-color;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: darken($title-color, 20%);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+}
