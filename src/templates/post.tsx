@@ -8,7 +8,7 @@ const PostTemplate: React.FC<{ pageContext: any }> = ({pageContext}) => {
     return (
         <Layout title={post.title}>
             <div className={styles.post}>
-                <img src={post.image} alt={post.title} className={styles.image}/>
+                <img src={post.image} alt={post.title}/>
                 <h1>{post.title}</h1>
                 <p>{post.body}</p>
             </div>

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {HeadFC, Link} from "gatsby"
 import Layout from "../../components/layout";
 import * as styles from "../../styles/posts.module.scss";
@@ -27,7 +27,7 @@ const PostsPage: React.FC = () => {
                 {posts.map(post => (
                     <Link to={`/posts/${post.id}`} className={styles.postLink} key={post.id}>
                         <div className={styles.post}>
-                            <img src={post.image} alt={`Imagem do ${post.title}`} className={styles.image} />
+                            <img src={post.image} alt={`Imagem do ${post.title}`}/>
                             <h3>{post.title}</h3>
                             <p>{post.summary}</p>
                         </div>
