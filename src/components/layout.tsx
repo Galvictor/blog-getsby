@@ -1,6 +1,7 @@
 import React from 'react';
-import {Link} from 'gatsby';
 import {layout} from "../styles/layout.module.scss";
+import Header from "./header";
+import Footer from "./footer";
 
 //import * as styles from './layout.module.scss';
 
@@ -12,28 +13,11 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({title, children}) => {
     return (
         <div className={layout}>
-            <header>
-                <h1>{title}</h1>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/about">About</Link>
-                        </li>
-                        <li>
-                            <Link to="/posts">Posts</Link>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+            <Header title={title}/>
 
             <main>{children}</main>
 
-            <footer>
-                <p>© 2024 - Meu Site</p>
-            </footer>
+            <Footer year="2024"/>
         </div>
     );
 };
