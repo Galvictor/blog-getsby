@@ -21,6 +21,12 @@ const Header: React.FC<HeaderProps> = ({title}) => {
                     <li>
                         <Link to="/posts">Posts</Link>
                     </li>
+                    <li>
+                        <Link to="/posts/add-posts">Add Post</Link>
+                    </li>
+                    <li>
+                        <Link to="/contato">Contato</Link>
+                    </li>
                 </ul>
             </nav>
         </header>
