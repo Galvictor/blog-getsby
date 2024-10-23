@@ -8,8 +8,7 @@ const ContatoPage: React.FC = () => {
     return (
         <Layout title="Contato">
             <div className={formContainer}>
-                <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact-static">
-                    <input type="hidden" name="bot-field"/>
+                <form method="post" data-netlify-honeypot="bot-field" data-netlify="true" name="contact-static">
                     <input type="hidden" name="form-name" value="contact-static"/>
                     <div className={formGroup}>
                         <label htmlFor="email">Email</label>
