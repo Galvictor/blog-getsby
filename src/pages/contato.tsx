@@ -6,7 +6,7 @@ import {formContainer, formGroup, submitBtn} from "../styles/form.module.scss";
 const ContatoPage: React.FC = () => {
 
     return (
-        <Layout title="Contato">
+        <Layout title="Contato Static">
             <div className={formContainer}>
                 <form method="post" data-netlify-honeypot="bot-field" data-netlify="true" name="contact-static">
                     <input type="hidden" name="form-name" value="contact-static"/>
