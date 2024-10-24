@@ -34,4 +34,4 @@ const ContatoPage: React.FC = () => {
 
 export default ContatoPage;
 
-export const Head: HeadFC = () => <title>Contato</title>
+export const Head: HeadFC = () => <title>Contato Static</title>

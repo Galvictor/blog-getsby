@@ -1,5 +1,7 @@
 import {Link} from "gatsby";
-import React from "react";
+import React, {useState} from "react";
+
+import {header, menuToggle, open} from "../styles/header.module.scss";
 
 interface HeaderProps {
     title: string;
@@ -7,10 +9,18 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({title}) => {
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+
     return (
-        <header>
-            <h1>{title}</h1>
-            <nav>
+        <header className={`${header} flex-row flex-lg-column`}>
+            <h1 className="mb-0 mb-lg-4">{title}</h1>
+            <div
+                className={`${menuToggle} ${isMenuOpen ? open : ""}`}
+                onClick={toggleMenu}
+            ></div>
+            <nav style={{transform: !isMenuOpen ? "translateY(0)" : ""}}>
                 <ul>
                     <li>
                         <Link to="/">Home</Link>
