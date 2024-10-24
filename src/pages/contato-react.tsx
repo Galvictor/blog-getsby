@@ -41,15 +41,15 @@ const ContatoPage: React.FC = () => {
                     <input type="hidden" name="form-name" value="contact-react"/>
                     <div className={formGroup}>
                         <label htmlFor="email">Email</label>
-                        <input id="email" type="email" name="email"/>
+                        <input id="email" type="email" name="email" value={inputs.email}/>
                     </div>
                     <div className={formGroup}>
                         <label htmlFor="name">Name</label>
-                        <input id="name" type="text" name="name"/>
+                        <input id="name" type="text" name="name" value={inputs.name}/>
                     </div>
                     <div className={formGroup}>
                         <label htmlFor="mensage">Mensagem</label>
-                        <textarea id="mensage" name="mensage"/>
+                        <textarea id="mensage" name="mensage" value={inputs.mensage}/>
                     </div>
                     <button type="submit" className={submitBtn}>
                         Enviar Mensagem
