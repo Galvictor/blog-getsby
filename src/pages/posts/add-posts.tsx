@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Layout from "../../components/layout";
 import {formContainer, formGroup, submitBtn} from "../../styles/form.module.scss";
+import SEO from "../../components/seo";
 
 interface Post {
     userId: number;
@@ -72,3 +73,5 @@ const AddPostPage: React.FC = () => {
 };
 
 export default AddPostPage;
+
+export const Head: React.FC = () => <SEO title="Add Posts"/>

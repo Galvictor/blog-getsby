@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {HeadFC, Link} from "gatsby"
 import Layout from "../../components/layout";
 import * as styles from "../../styles/posts.module.scss";
+import SEO from "../../components/seo";
 
 //import {posts} from '../../data/posts';
 
@@ -39,4 +40,4 @@ const PostsPage: React.FC = () => {
 };
 
 export default PostsPage;
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => <SEO title="Posts"/>

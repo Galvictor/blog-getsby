@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../../components/layout";
 import {graphql, useStaticQuery} from "gatsby";
+import SEO from "../../components/seo";
 
 const UsersPage: React.FC = () => {
 
@@ -48,3 +49,5 @@ const UsersPage: React.FC = () => {
 }
 
 export default UsersPage;
+
+export const Head: React.FC = () => <SEO title="Users Page"/>

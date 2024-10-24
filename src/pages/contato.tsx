@@ -2,6 +2,7 @@ import * as React from "react"
 import type {HeadFC} from "gatsby"
 import Layout from "../components/layout"
 import {formContainer, formGroup, submitBtn} from "../styles/form.module.scss";
+import SEO from "../components/seo";
 
 const ContatoPage: React.FC = () => {
 
@@ -34,4 +35,4 @@ const ContatoPage: React.FC = () => {
 
 export default ContatoPage;
 
-export const Head: HeadFC = () => <title>Contato Static</title>
+export const Head: HeadFC = () => <SEO title="Contato Static"/>
