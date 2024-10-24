@@ -12,6 +12,7 @@ const config: GatsbyConfig = {
             options: {
                 endpoints: [
                     'https://jsonplaceholder.typicode.com/posts',
+                    'https://jsonplaceholder.typicode.com/users',
                 ],
             },
         },

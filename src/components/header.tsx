@@ -30,6 +30,9 @@ const Header: React.FC<HeaderProps> = ({title}) => {
                     <li>
                         <Link to="/contato-react">Contato React</Link>
                     </li>
+                    <li>
+                        <Link to="/users">Users</Link>
+                    </li>
                 </ul>
             </nav>
         </header>

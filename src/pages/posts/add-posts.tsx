@@ -2,12 +2,41 @@ import React, {useState} from "react";
 import Layout from "../../components/layout";
 import {formContainer, formGroup, submitBtn} from "../../styles/form.module.scss";
 
+interface Post {
+    userId: number;
+    title: string;
+    body: string;
+}
+
 const AddPostPage: React.FC = () => {
-    const [title, setTitle] = useState('');
-    const [body, setBody] = useState('');
+
+    const [post, setPost] = useState<Post>({
+        userId: 1,
+        title: "",
+        body: "",
+    });
 
     const handleSubmit = (e: React.FormEvent) => {
+
+        if (post.title === '' || post.body === '') {
+            alert('Preencha todos os campos');
+        }
+
         e.preventDefault();
+
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify(post),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                setPost({userId: 1, title: "", body: ""});
+                alert('Post adicionado com sucesso!');
+            });
     };
 
     return (
@@ -19,8 +48,8 @@ const AddPostPage: React.FC = () => {
                         <input
                             type="text"
                             id="title"
-                            value={title}
-                            onChange={(e) => setTitle(e.target.value)}
+                            value={post.title}
+                            onChange={(e) => setPost({...post, title: e.target.value})}
                         />
                     </div>
 
@@ -28,8 +57,8 @@ const AddPostPage: React.FC = () => {
                         <label htmlFor="body">Conteúdo</label>
                         <textarea
                             id="body"
-                            value={body}
-                            onChange={(e) => setBody(e.target.value)}
+                            value={post.body}
+                            onChange={(e) => setPost({...post, body: e.target.value})}
                         />
                     </div>
 
