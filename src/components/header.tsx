@@ -29,6 +29,9 @@ const Header: React.FC<HeaderProps> = ({title}) => {
                         <Link to="/about">About</Link>
                     </li>
                     <li>
+                        <Link to="/mdxs">MDX Posts</Link>
+                    </li>
+                    <li>
                         <Link to="/posts">Posts</Link>
                     </li>
                     <li>
