@@ -6,13 +6,23 @@ import SEO from "../components/seo";
 const IndexPage: React.FC<PageProps> = () => {
 
     const query = useStaticQuery(graphql`
-    query MyQuery {
-          allFile {
-            nodes {
-              name
-            }
-          }
-        }
+query MyQuery {
+  allMdx(sort: {frontmatter: {date: DESC}}) {
+    nodes {
+      frontmatter {
+        title
+        slug
+        date
+      }
+      excerpt
+    }
+  }
+  allFile {
+    nodes {
+      name
+    }
+  }
+}
     `);
 
     console.log(query);
@@ -27,6 +37,18 @@ const IndexPage: React.FC<PageProps> = () => {
                         <li key={node.name}>{node.name}</li>
                     ))}
                 </ul>
+                <div>
+                    <h3>Posts</h3>
+                    <ul>
+                        {query.allMdx.nodes.map((node: any) => (
+                            <li key={node.frontmatter.slug}>
+                                <h4>{node.frontmatter.title}</h4>
+                                <p>{node.frontmatter.date}</p>
+                                <p>{node.excerpt}</p>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
 
         </Layout>
