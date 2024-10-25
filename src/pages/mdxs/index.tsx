@@ -1,5 +1,5 @@
 import * as React from "react"
-import {graphql, HeadFC, PageProps, useStaticQuery} from "gatsby"
+import {graphql, HeadFC, Link, PageProps, useStaticQuery} from "gatsby"
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 
@@ -12,7 +12,7 @@ query MyQuery {
       frontmatter {
         title
         slug
-        date(formatString: "D/M/Y")
+        date(formatString: "DD/MM/YYYY")
       }
       excerpt
     }
@@ -42,7 +42,7 @@ query MyQuery {
                     <ul>
                         {query.allMdx.nodes.map((node: any) => (
                             <li key={node.frontmatter.slug}>
-                                <h4>{node.frontmatter.title}</h4>
+                                <Link to={`/mdxs/${node.frontmatter.slug}`}>{node.frontmatter.title}</Link>
                                 <p>{node.frontmatter.date}</p>
                                 <p>{node.excerpt}</p>
                             </li>
