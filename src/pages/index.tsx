@@ -12,7 +12,7 @@ query MyQuery {
       frontmatter {
         title
         slug
-        date
+        date(formatString: "D/M/Y")
       }
       excerpt
     }
