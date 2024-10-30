@@ -12,6 +12,9 @@ const config: GatsbyConfig = {
     plugins: [
         "gatsby-plugin-sass",
         "gatsby-plugin-mdx",
+        "gatsby-plugin-image",
+        "gatsby-plugin-sharp",
+        "gatsby-transformer-sharp",
         {
             resolve: 'gatsby-source-rest-api',
             options: {
@@ -26,6 +29,13 @@ const config: GatsbyConfig = {
             options: {
                 name: 'posts',
                 path: `${__dirname}/src/data/posts`,
+            }
+        },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'images',
+                path: `${__dirname}/src/images/`,
             }
         }
     ],

@@ -2,13 +2,22 @@ import React from "react";
 import Layout from "../../components/layout";
 import {graphql, HeadFC} from "gatsby";
 import SEO from "../../components/seo";
+import {GatsbyImage, getImage} from "gatsby-plugin-image";
 
 const MDXPost: React.FC<{ data: any, children: React.ReactNode }> = ({data, children}) => {
+
+    const img = getImage(data.mdx.frontmatter.featuredImage);
+    let featuredImage = null;
+
+    if (img) {
+        featuredImage = <GatsbyImage image={img} alt={data.mdx.frontmatter.title}/>
+    }
 
     return (
         <Layout title="MDX Post">
             <h2>{data.mdx.frontmatter.title}</h2>
             <p>Data: {data.mdx.frontmatter.date}</p>
+            {featuredImage}
             {children}
         </Layout>
     )
@@ -22,6 +31,11 @@ export const query = graphql`query($id: String) {
             frontmatter {
                 title
                 date(formatString: "DD/MM/YYYY")
+                featuredImage{
+                    childImageSharp {
+                        gatsbyImageData
+                    }
+                }
             }
         }
     }`;
