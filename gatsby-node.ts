@@ -28,7 +28,7 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
             childImageSharp: ImageSharp
         }
         type ImageSharp implements Node {
-            gatsbyImageData: JSON
+            gatsbyImageData: GatsbyImageData!
         }
     `);
 };
