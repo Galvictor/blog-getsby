@@ -16,7 +16,11 @@ query MyQuery {
         date(formatString: "DD/MM/YYYY")
         thumb{
                     childImageSharp {
-                        gatsbyImageData
+                        gatsbyImageData(
+                            width: 500
+                            placeholder: BLURRED
+                            formats: [AUTO, WEBP, AVIF]
+                        )
                     }
                 }
       }

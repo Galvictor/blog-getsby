@@ -33,7 +33,11 @@ export const query = graphql`query($id: String) {
                 date(formatString: "DD/MM/YYYY")
                 featuredImage{
                     childImageSharp {
-                        gatsbyImageData
+                        gatsbyImageData(
+                            width: 1600
+                            placeholder: BLURRED
+                            formats: [AUTO, WEBP, AVIF]
+                        )
                     }
                 }
             }
