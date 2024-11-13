@@ -1,6 +1,7 @@
 # Blog Gatsby com TypeScript, MDX e SCSS
 
-Este repositório contém um blog desenvolvido com o framework Gatsby, utilizando as tecnologias TypeScript, MDX, SCSS e com design responsivo implementado.
+Este repositório contém um blog desenvolvido com o framework Gatsby, utilizando as tecnologias TypeScript, MDX, SCSS e
+com design responsivo implementado.
 
 ## Informações do Projeto
 
@@ -22,16 +23,23 @@ Este projeto é um blog simples desenvolvido com Gatsby que inclui:
 ## Funcionalidades do Projeto
 
 - **Layouts das Páginas**: Estrutura modular com páginas personalizadas.
-- **Componentização**: Componentes individuais para facilitar a manutenção e reutilização, incluindo `Header`, `Footer`, `Layout`, `SEO`, entre outros.
-- **Design Responsivo**: Layout responsivo implementado com SCSS e Bootstrap, para garantir a adaptação em diferentes dispositivos.
-- **Estilos com SCSS e CSS-in-JS**: Utilização de SCSS para organizar estilos e CSS-in-JS para algumas implementações de design dinâmico.
+- **Componentização**: Componentes individuais para facilitar a manutenção e reutilização, incluindo `Header`, `Footer`,
+  `Layout`, `SEO`, entre outros.
+- **Design Responsivo**: Layout responsivo implementado com SCSS e Bootstrap, para garantir a adaptação em diferentes
+  dispositivos.
+- **Estilos com SCSS e CSS-in-JS**: Utilização de SCSS para organizar estilos e CSS-in-JS para algumas implementações de
+  design dinâmico.
 
 ## Funcionalidades Adicionais
 
-- **Rotas Internas**: Além de rotas para posts criados com MDX, foram adicionadas rotas para posts originados da API externa [https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/).
-- **Formulário de Gerenciamento de Posts**: Formulário para adicionar, editar e deletar posts. (Funcionalidade implementada como prova de conceito, sem persistência).
-- **Otimização de Imagens**: Plugins para otimizar o carregamento de imagens, incluindo `gatsby-plugin-image`, `gatsby-plugin-sharp` e `gatsby-transformer-sharp`.
-- **SEO e Mapa do Site**: Plugins como `gatsby-plugin-sitemap`, `gatsby-plugin-robots-txt` e `useSiteMetadata` foram configurados para melhorar a indexação e otimização para mecanismos de busca.
+- **Rotas Internas**: Além de rotas para posts criados com MDX, foram adicionadas rotas para posts originados da API
+  externa [https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/).
+- **Formulário de Gerenciamento de Posts**: Formulário para adicionar, editar e deletar posts. (Funcionalidade
+  implementada como prova de conceito, sem persistência).
+- **Otimização de Imagens**: Plugins para otimizar o carregamento de imagens, incluindo `gatsby-plugin-image`,
+  `gatsby-plugin-sharp` e `gatsby-transformer-sharp`.
+- **SEO e Mapa do Site**: Plugins como `gatsby-plugin-sitemap`, `gatsby-plugin-robots-txt` e `useSiteMetadata` foram
+  configurados para melhorar a indexação e otimização para mecanismos de busca.
 
 ## Tecnologias e Ferramentas Utilizadas
 
@@ -40,6 +48,7 @@ Este projeto é um blog simples desenvolvido com Gatsby que inclui:
 - **SCSS**: Pré-processador CSS para organizar estilos.
 - **Bootstrap**: Framework de CSS para facilitar a criação do layout responsivo.
 - **Gatsby**: Framework utilizado para criação do site estático e gerenciamento das rotas e componentes.
+- **GraphQL**: Usado para consultar dados e alimentar componentes e páginas de forma otimizada.
 - **Netlify**: Utilizado como CDN e provedor de hospedagem com CI/CD integrado.
 
 ## Como Executar o Projeto
