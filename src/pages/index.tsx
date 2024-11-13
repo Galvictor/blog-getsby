@@ -7,7 +7,17 @@ const IndexPage: React.FC<PageProps> = () => {
 
     return (
         <Layout title="Home">
-            <p>Bem-vindo à página inicial!</p>
+            <h1>Bem-vindo à página inicial!</h1>
+            <ul>
+                <li>Curso: Pós-Graduação MIT em Desenvolvimento Web Full Stack</li>
+                <li>Aula: Front-end Jamstack com Gatsby [24E4_2]</li>
+                <li>Aluno: João Victor de Souza Galvão Lopes</li>
+                <li>Repositório GitHub: <a target="_blank"
+                                           href="https://github.com/Galvictor/blog-getsby">https://github.com/Galvictor/blog-getsby</a>
+                </li>
+                <li>Deploy (CDN): Netlify</li>
+            </ul>
+
         </Layout>
     )
 }

@@ -21,6 +21,7 @@ const AddPostPage: React.FC = () => {
 
         if (post.title === '' || post.body === '') {
             alert('Preencha todos os campos');
+            return;
         }
 
         e.preventDefault();

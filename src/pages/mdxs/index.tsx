@@ -35,7 +35,7 @@ query MyQuery {
 
     return (
         <Layout title="MDXs">
-            <p>MDXs</p>
+            <h1>MDXs</h1>
             <div className="text-start">
                 <h3>Arquivos MDX em POST</h3>
                 <ul>
@@ -45,7 +45,7 @@ query MyQuery {
                 </ul>
                 <div>
                     <h3>Posts</h3>
-                    <ul>
+                    <div className="row">
                         {query.allMdx.nodes.map((node: any) => {
 
                             const img = getImage(node.frontmatter.thumb);
@@ -55,15 +55,15 @@ query MyQuery {
                                 thumb = <GatsbyImage image={img} alt={node.frontmatter.title}/>
                             }
 
-                            return (<li key={node.frontmatter.slug}>
+                            return (<div className="col-4 text-center" key={node.frontmatter.slug}>
                                 {thumb}<br/>
                                 <Link to={`/mdxs/${node.frontmatter.slug}`}>{node.frontmatter.title}</Link>
                                 <p>{node.frontmatter.date}</p>
                                 <p>{node.excerpt}</p>
-                            </li>)
+                            </div>)
 
                         })}
-                    </ul>
+                    </div>
                 </div>
             </div>
 

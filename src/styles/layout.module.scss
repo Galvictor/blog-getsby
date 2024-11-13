@@ -1,7 +1,7 @@
 // Estilos do Layout
 $primary-color: #3498db;
 $secondary-color: #2ecc71;
-$background-color: #f4f4f4;
+$background-color: #fff;
 $text-color: #333;
 
 .layout {
@@ -16,6 +16,51 @@ $text-color: #333;
     flex: 1;
     padding: 20px;
     text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .conteudo {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+
+      section{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          font-size: 1.4rem;
+          font-weight: bold;
+        }
+      }
+
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("../images/logo-infnet.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.5; /* Define a opacidade da imagem de fundo */
+      z-index: 1; /* Coloca o pseudo-elemento atrás do conteúdo */
+    }
+
   }
 
   footer {

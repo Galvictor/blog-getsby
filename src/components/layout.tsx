@@ -1,5 +1,5 @@
 import React from 'react';
-import {layout} from "../styles/layout.module.scss";
+import {layout,conteudo} from "../styles/layout.module.scss";
 import Header from "./header";
 import Footer from "./footer";
 
@@ -15,7 +15,11 @@ const Layout: React.FC<LayoutProps> = ({title, children}) => {
         <div className={layout}>
             <Header title={title}/>
 
-            <main>{children}</main>
+            <main>
+                <div className={conteudo}>
+                    {children}
+                </div>
+            </main>
 
             <Footer year="2024"/>
         </div>
