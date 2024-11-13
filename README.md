@@ -34,7 +34,7 @@ Este projeto é um blog simples desenvolvido com Gatsby que inclui:
 
 - **Rotas Internas**: Além de rotas para posts criados com MDX, foram adicionadas rotas para posts originados da API
   externa [https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/).
-- **Formulário de Gerenciamento de Posts**: Formulário para adicionar, editar e deletar posts. (Funcionalidade
+- **Formulário de Gerenciamento de Posts**: Formulário para adicionar (Funcionando), editar e deletar posts. (Funcionalidade
   implementada como prova de conceito, sem persistência).
 - **Otimização de Imagens**: Plugins para otimizar o carregamento de imagens, incluindo `gatsby-plugin-image`,
   `gatsby-plugin-sharp` e `gatsby-transformer-sharp`.
